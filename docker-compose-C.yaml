@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  msvc_chasis:
+    container_name: msvc_chasis
+    image: apolos7/chasi:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - msvc
+    restart: always
+networks:
+  msvc:
+    name: msvc
