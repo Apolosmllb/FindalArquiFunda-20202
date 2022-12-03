@@ -12,15 +12,12 @@ import java.util.Map;
 
 @Controller
 public class ChasisController {
-
     ChasisService chasisService;
-
     ChasisController(ChasisService chasisService){
         this.chasisService = chasisService;
     }
     String data = "Data : ";
     Map<String, Chasis> empData = new HashMap<String, Chasis>();
-
     @GetMapping(value = "Info")
     public ResponseEntity<?>  getData() {
         Chasis emp = chasisService.getData();
